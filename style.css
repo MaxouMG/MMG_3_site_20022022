@@ -1,0 +1,331 @@
+@charset "UTF-8";
+/*Ceci regroupe les sous-dossiers de -layout et de -pages */
+/*couleurs*/
+/*tailles de police ou d'icône*/
+/* mixin*/
+/*extensions*/
+.button, #explore1 .explore2, .lpdg, .lne, .alf, .ldds {
+  width: 250px;
+  -webkit-box-shadow: 0px 5px 0px #DCDCDC;
+          box-shadow: 0px 5px 0px #DCDCDC;
+  -webkit-transition: 1000ms;
+  transition: 1000ms;
+  border-radius: 25px;
+  border: 1px solid #F2F2F2;
+}
+
+.button:hover, #explore1 .explore2:hover, .lpdg:hover, .lne:hover, .alf:hover, .ldds:hover {
+  -webkit-transform: scale(1.01);
+          transform: scale(1.01);
+  -webkit-filter: opacity(70%);
+          filter: opacity(70%);
+  -webkit-box-shadow: 20px 15px 2px 0px #DCDCDC;
+          box-shadow: 20px 15px 2px 0px #DCDCDC;
+}
+
+/*Ma page d'accueil  hors en tête*/
+/* mobile first*/
+body {
+  margin: 0 auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+/*première section - réserver le menu*/
+section {
+  max-width: 505px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #F2F2F2;
+  /*@include centernull;*/
+}
+
+.reserve {
+  background-color: #F2F2F2;
+}
+
+#aroundme {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #DCDCDC;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.fas.fa-map-marker-alt {
+  text-align: center;
+  margin-right: 0;
+  margin-left: 0;
+}
+
+::-webkit-input-placeholder {
+  color: #000;
+}
+
+:-ms-input-placeholder {
+  color: #000;
+}
+
+::-ms-input-placeholder {
+  color: #000;
+}
+
+::placeholder {
+  color: #000;
+}
+
+#city {
+  text-align: center;
+  margin-right: 0;
+  margin-left: 0;
+  border: none;
+  background-color: #DCDCDC;
+}
+
+h2 {
+  text-align: center;
+  padding: 10px 25px 10px 10px;
+}
+
+#explore1 .explore2 {
+  background: linear-gradient(355deg, #9356DC 30%, #FF79DA 70%);
+  color: #fff;
+  height: 35px;
+  padding-top: 20px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+/*Partie main, sous-partie aside et ensemble container_choice*/
+aside {
+  color: #000;
+}
+
+aside .borders {
+  text-align: left;
+  width: 475px;
+}
+
+.container_choice {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.chose {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid #000;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 25px;
+  background: #F2F2F2;
+}
+
+.number p {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  background-color: #9356DC;
+  color: #fff;
+  border: 1px solid #9356DC;
+  border-radius: 50%;
+}
+
+/*
+a {
+      width: 95%;
+      display: flex;
+      justify-content: flex-end;
+      text-decoration: none;
+      margin-left: 0px; 
+}
+.choose {
+      @extend .button;
+      @include museum-setting;
+      height: 60px;
+      position: relative;
+      background-color: $greybground;
+      display: flex;
+      padding-top: 20px;
+      padding-right: 50px;
+      padding-left: 0px;
+      &:hover{
+            background: lighten($secondary, 15%);
+      }
+}
+h3 {
+      color: #000;
+      word-break: break-word;
+      margin-left: 0px;
+      margin-right: 0px;
+      padding-top: 5px;
+}
+.fas.fa-1, .fas.fa-2, .fas.fa-3 {
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+      position: absolute;
+      left: -4%;
+      background-color: $primary;
+      color: #fff;
+      border: 1px solid $primary;
+      border-radius: 50%;
+      @include centernull;
+      &::before {
+            font-size: $iconsize;
+      }
+}
+
+.fas.fa-mobile-alt, .fas.fa-list, .fas.fa-store {
+
+      @include centernull;
+      & :hover{
+            color: $primary;
+      }
+      &::before {
+            font-size: $iconsize+0.5em;
+      }
+}
+
+.fas.fa-1::before{
+      content: "\31";
+}
+.fas.fa-2::before{
+      content: "\32";
+}
+.fas.fa-3::before{
+      content: "\33";
+}*/
+/*
+.fas.fa-mobile-alt::before {
+      content: "\f3cd";
+}
+.fas.fa-list::before {
+      content : "\f03a";
+}
+.fas.fa-store::before {
+      content : "\f54e";
+}
+*/
+/* partie main section avec cards*/
+.lpdg, .lne, .alf, .ldds {
+  width: 80%;
+  max-width: 350px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#lpdg_home, #lne_home, #alf_home, #ldds_home {
+  width: 100%;
+  border: 1px solid black;
+}
+
+/*version tablette*/
+@media screen and (min-width: 768px) {
+  .reserve {
+    background-color: #fff;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+  }
+  #aroundme, #explore1 {
+    max-width: 505px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+  }
+  /*Partie main, sous-partie aside et ensemble container_choice*/
+  .borders {
+    text-align: center;
+  }
+  .container_choice {
+    max-width: 895px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  a {
+    margin-right: 10%;
+  }
+  .choose, .compose, .in_situ {
+    width: 40%;
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+  /* partie main section avec cards*/
+  section {
+    max-width: none;
+  }
+}
+
+/* ma version desktop*/
+@media screen and (min-width: 992px) {
+  .reserve {
+    background-color: #fff;
+  }
+  .container_choice {
+    width: inherit;
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
+  a {
+    margin-right: 20%;
+  }
+  .choose, .compose, .in_situ {
+    margin-bottom: 30px;
+  }
+  .fas.fa-1::before, .fas.fa-2::before, .fas.fa-3::before,
+  .fas.fa-mobile-alt::before, .fas.fa-list::before, .fas.fa-store::before {
+    font-size: 1.5em;
+  }
+}
+
+/* en-têtes de pages*/
+/*ma police d'écriture*/
+header {
+  margin: 0 auto;
+}
+
+h1 {
+  font-family: "Shrikhand", cursive;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+/*Ceci est ma page principale de style*/
+* {
+  margin: 0 auto;
+  font-family: 'Roboto', sans-serif;
+}
+/*# sourceMappingURL=style.css.map */
