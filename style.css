@@ -4,8 +4,7 @@
 /*tailles de police ou d'icône*/
 /* mixin*/
 /*extensions*/
-.button, #explore1 .explore2, .lpdg, .lne, .alf, .ldds {
-  width: 250px;
+.button, #explore1 .explore2, .choose {
   -webkit-box-shadow: 0px 5px 0px #DCDCDC;
           box-shadow: 0px 5px 0px #DCDCDC;
   -webkit-transition: 1000ms;
@@ -14,7 +13,7 @@
   border: 1px solid #F2F2F2;
 }
 
-.button:hover, #explore1 .explore2:hover, .lpdg:hover, .lne:hover, .alf:hover, .ldds:hover {
+.button:hover, #explore1 .explore2:hover, .choose:hover {
   -webkit-transform: scale(1.01);
           transform: scale(1.01);
   -webkit-filter: opacity(70%);
@@ -43,7 +42,6 @@ section {
   margin: 0 auto;
   text-align: center;
   background-color: #F2F2F2;
-  /*@include centernull;*/
 }
 
 .reserve {
@@ -92,12 +90,13 @@ section {
   background-color: #DCDCDC;
 }
 
-h2 {
+section h2 {
   text-align: center;
   padding: 10px 25px 10px 10px;
 }
 
 #explore1 .explore2 {
+  width: 250px;
   background: linear-gradient(355deg, #9356DC 30%, #FF79DA 70%);
   color: #fff;
   height: 35px;
@@ -107,13 +106,12 @@ h2 {
 }
 
 /*Partie main, sous-partie aside et ensemble container_choice*/
-aside {
-  color: #000;
-}
-
-aside .borders {
-  text-align: left;
-  width: 475px;
+/*aside {
+      color: #000;*/
+.borders {
+  max-width: 485px;
+  text-align: start;
+  padding: 10px 25px;
 }
 
 .container_choice {
@@ -126,16 +124,29 @@ aside .borders {
           flex-direction: column;
 }
 
-.chose {
+.choose {
+  width: 88%;
+  max-width: 505px;
+  height: 80px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border: 1px solid #000;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border-radius: 25px;
   background: #F2F2F2;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.choose:hover {
+  background-color: #e4d5f6;
+}
+
+.number {
+  position: absolute;
+  right: 93%;
 }
 
 .number p {
@@ -149,95 +160,32 @@ aside .borders {
   border-radius: 50%;
 }
 
-/*
-a {
-      width: 95%;
-      display: flex;
-      justify-content: flex-end;
-      text-decoration: none;
-      margin-left: 0px; 
+.picture {
+  width: 15%;
+  font-size: 1.2em;
+  text-align: right;
 }
-.choose {
-      @extend .button;
-      @include museum-setting;
-      height: 60px;
-      position: relative;
-      background-color: $greybground;
-      display: flex;
-      padding-top: 20px;
-      padding-right: 50px;
-      padding-left: 0px;
-      &:hover{
-            background: lighten($secondary, 15%);
-      }
+
+.picture:hover {
+  color: #9356DC;
 }
+
 h3 {
-      color: #000;
-      word-break: break-word;
-      margin-left: 0px;
-      margin-right: 0px;
-      padding-top: 5px;
-}
-.fas.fa-1, .fas.fa-2, .fas.fa-3 {
-      width: 30px;
-      height: 30px;
-      line-height: 30px;
-      position: absolute;
-      left: -4%;
-      background-color: $primary;
-      color: #fff;
-      border: 1px solid $primary;
-      border-radius: 50%;
-      @include centernull;
-      &::before {
-            font-size: $iconsize;
-      }
+  width: 75%;
 }
 
-.fas.fa-mobile-alt, .fas.fa-list, .fas.fa-store {
-
-      @include centernull;
-      & :hover{
-            color: $primary;
-      }
-      &::before {
-            font-size: $iconsize+0.5em;
-      }
-}
-
-.fas.fa-1::before{
-      content: "\31";
-}
-.fas.fa-2::before{
-      content: "\32";
-}
-.fas.fa-3::before{
-      content: "\33";
-}*/
-/*
-.fas.fa-mobile-alt::before {
-      content: "\f3cd";
-}
-.fas.fa-list::before {
-      content : "\f03a";
-}
-.fas.fa-store::before {
-      content : "\f54e";
-}
-*/
 /* partie main section avec cards*/
+/*
 .lpdg, .lne, .alf, .ldds {
-  width: 80%;
-  max-width: 350px;
-  margin-top: 20px;
-  margin-bottom: 20px;
+      @extend .button;
+      @include museum-setting
+
 }
 
-#lpdg_home, #lne_home, #alf_home, #ldds_home {
-  width: 100%;
-  border: 1px solid black;
-}
-
+#lpdg_home, #lne_home, #alf_home, #ldds_home{
+      width: 100%;
+      border: 1px solid black;
+}*/
 /*version tablette*/
 @media screen and (min-width: 768px) {
   .reserve {
@@ -300,7 +248,7 @@ h3 {
   }
   .fas.fa-1::before, .fas.fa-2::before, .fas.fa-3::before,
   .fas.fa-mobile-alt::before, .fas.fa-list::before, .fas.fa-store::before {
-    font-size: 1.5em;
+    font-size: 1.7em;
   }
 }
 
