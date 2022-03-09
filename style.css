@@ -4,7 +4,7 @@
 /*tailles de police ou d'icône*/
 /* mixin*/
 /*extensions*/
-.button, #explore1 .explore2, .choose {
+.button, #explore1 .explore2, .choose, .menu_card {
   -webkit-box-shadow: 0px 5px 0px #DCDCDC;
           box-shadow: 0px 5px 0px #DCDCDC;
   -webkit-transition: 1000ms;
@@ -13,7 +13,7 @@
   border: 1px solid #F2F2F2;
 }
 
-.button:hover, #explore1 .explore2:hover, .choose:hover {
+.button:hover, #explore1 .explore2:hover, .choose:hover, .menu_card:hover {
   -webkit-transform: scale(1.01);
           transform: scale(1.01);
   -webkit-filter: opacity(70%);
@@ -162,7 +162,7 @@ section h2 {
 
 .picture {
   width: 15%;
-  font-size: 1.2em;
+  font-size: 1.1em;
   text-align: right;
 }
 
@@ -172,9 +172,32 @@ section h2 {
 
 h3 {
   width: 75%;
+  font-size: 1.1em;
 }
 
 /* partie main section avec cards*/
+.menu_card {
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 20px;
+}
+
+#img_home {
+  width: 95%;
+  height: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: 1px solid #9356DC;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+}
+
+.icon-legend {
+  height: 50%;
+}
+
 /*
 .lpdg, .lne, .alf, .ldds {
       @extend .button;
@@ -219,7 +242,7 @@ h3 {
   a {
     margin-right: 10%;
   }
-  .choose, .compose, .in_situ {
+  .choose {
     width: 40%;
     padding-right: 0px;
     padding-left: 0px;
@@ -240,15 +263,8 @@ h3 {
     -ms-flex-line-pack: center;
         align-content: center;
   }
-  a {
-    margin-right: 20%;
-  }
-  .choose, .compose, .in_situ {
+  .choose {
     margin-bottom: 30px;
-  }
-  .fas.fa-1::before, .fas.fa-2::before, .fas.fa-3::before,
-  .fas.fa-mobile-alt::before, .fas.fa-list::before, .fas.fa-store::before {
-    font-size: 1.7em;
   }
 }
 
