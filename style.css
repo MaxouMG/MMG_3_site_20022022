@@ -23,44 +23,40 @@
 
 /*Ma page d'accueil  hors en tête*/
 /* mobile first*/
-body {
-  /*box-sizing: border-box;*/
-  min-width: 250px;
+/*première section - réserver le menu*/
+section {
+  min-width: 360px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
   text-decoration: none;
   list-style-type: none;
-}
-
-/*première section - réserver le menu*/
-section {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   text-align: center;
   background-color: #F2F2F2;
 }
 
 .reserve {
-  background-color: #F2F2F2;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  min-width: 360px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  /*justify-content: center;
-      align-items: center;
-      text-align: center;*/
+  text-decoration: none;
+  list-style-type: none;
+  text-align: center;
+  background-color: #F2F2F2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+h2 {
+  padding-right: 15px;
+  padding-left: 15px;
 }
 
 #aroundme {
@@ -68,12 +64,6 @@ section {
   background-color: #DCDCDC;
   padding-top: 10px;
   padding-bottom: 10px;
-}
-
-.fas.fa-map-marker-alt {
-  text-align: center;
-  margin-right: 0;
-  margin-left: 0;
 }
 
 ::-webkit-input-placeholder {
@@ -126,16 +116,24 @@ section {
   margin-bottom: 25px;
 }
 
-/*Partie main, sous-partie aside et ensemble container_choice*/
-/*aside {
-      color: #000;*/
-.borders {
-  max-width: 485px;
-  text-align: start;
-  padding: 10px 25px;
+#explore1 p {
+  padding-right: 15px;
+  padding-left: 15px;
 }
 
-.container_choice {
+/*Partie main, sous-partie aside et ensemble container_choice*/
+aside {
+  min-width: 360px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-decoration: none;
+  list-style-type: none;
+  text-align: center;
+}
+
+.borders {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -143,12 +141,25 @@ section {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  text-align: left;
+  padding: 10px 25px;
+}
+
+@media screen and (min-width: 500px) {
+  .borders {
+    width: 35%;
+    text-align: end;
+  }
+}
+
+.container_choice {
+  margin: 0 auto;
+  width: 80%;
+  max-width: 500px;
 }
 
 .choose {
-  width: 88%;
-  max-width: 505px;
-  height: 80px;
+  height: 85px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -156,8 +167,7 @@ section {
       -ms-flex-align: center;
           align-items: center;
   background: #F2F2F2;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   position: relative;
 }
 
@@ -167,7 +177,7 @@ section {
 
 .number {
   position: absolute;
-  right: 93%;
+  right: 95%;
 }
 
 .number p {
@@ -183,7 +193,7 @@ section {
 
 .picture {
   width: 15%;
-  font-size: 1.1em;
+  font-size: 1em;
   text-align: right;
 }
 
@@ -192,8 +202,7 @@ section {
 }
 
 h3 {
-  width: 75%;
-  font-size: 1.1em;
+  padding-left: 5%;
 }
 
 /* partie main section avec cards*/
@@ -221,18 +230,33 @@ h3 {
 
 /*version tablette*/
 @media screen and (min-width: 768px) {
+  section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+    background-color: #F2F2F2;
+    padding-bottom: 5px;
+  }
   .reserve {
+    width: 550px;
     background-color: #fff;
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
   }
   #aroundme, #explore1 {
-    max-width: 505px;
     border-top-right-radius: 20px;
     border-top-left-radius: 20px;
   }
   /*Partie main, sous-partie aside et ensemble container_choice*/
   .borders {
+    width: 100%;
     text-align: center;
   }
   .container_choice {
@@ -246,6 +270,9 @@ h3 {
             flex-direction: row;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   a {
     margin-right: 10%;
@@ -254,6 +281,8 @@ h3 {
     width: 40%;
     padding-right: 0px;
     padding-left: 0px;
+    margin-right: 20px;
+    margin-left: 20px;
   }
   /* partie main section avec cards*/
   section {
