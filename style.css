@@ -1,5 +1,4 @@
 @charset "UTF-8";
-/*Ceci regroupe les sous-dossiers de -layout et de -pages */
 /*couleurs*/
 /*tailles de police ou d'icône*/
 /* mixin*/
@@ -25,9 +24,8 @@
 /*Ma page d'accueil  hors en tête*/
 /* mobile first*/
 body {
-  margin: 0 auto;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  /*box-sizing: border-box;*/
+  min-width: 250px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -38,23 +36,35 @@ body {
 
 /*première section - réserver le menu*/
 section {
-  max-width: 505px;
-  margin: 0 auto;
-  text-align: center;
-  background-color: #F2F2F2;
-}
-
-.reserve {
-  background-color: #F2F2F2;
-}
-
-#aroundme {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  background-color: #F2F2F2;
+}
+
+.reserve {
+  background-color: #F2F2F2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  /*justify-content: center;
+      align-items: center;
+      text-align: center;*/
+}
+
+#aroundme {
+  width: 100%;
   background-color: #DCDCDC;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -90,16 +100,27 @@ section {
   background-color: #DCDCDC;
 }
 
-section h2 {
-  text-align: center;
-  padding: 10px 25px 10px 10px;
+#explore1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 #explore1 .explore2 {
   width: 250px;
+  height: 35px;
   background: linear-gradient(355deg, #9356DC 30%, #FF79DA 70%);
   color: #fff;
-  height: 35px;
   padding-top: 20px;
   margin-top: 25px;
   margin-bottom: 25px;
@@ -198,23 +219,10 @@ h3 {
   height: 50%;
 }
 
-/*
-.lpdg, .lne, .alf, .ldds {
-      @extend .button;
-      @include museum-setting
-
-}
-
-#lpdg_home, #lne_home, #alf_home, #ldds_home{
-      width: 100%;
-      border: 1px solid black;
-}*/
 /*version tablette*/
 @media screen and (min-width: 768px) {
   .reserve {
     background-color: #fff;
-    border-top-right-radius: 20px;
-    border-top-left-radius: 20px;
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
   }
@@ -255,9 +263,6 @@ h3 {
 
 /* ma version desktop*/
 @media screen and (min-width: 992px) {
-  .reserve {
-    background-color: #fff;
-  }
   .container_choice {
     width: inherit;
     -ms-flex-line-pack: center;
@@ -288,8 +293,10 @@ h1 {
 }
 
 /*Ceci est ma page principale de style*/
-* {
+body {
   margin: 0 auto;
   font-family: 'Roboto', sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 /*# sourceMappingURL=style.css.map */
