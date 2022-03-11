@@ -6,8 +6,8 @@
 .button, #explore1 .explore2, .choose, .menu_card {
   -webkit-box-shadow: 0px 5px 0px #DCDCDC;
           box-shadow: 0px 5px 0px #DCDCDC;
-  -webkit-transition: 1000ms;
-  transition: 1000ms;
+  -webkit-transition: 500ms;
+  transition: 500ms;
   border-radius: 25px;
   border: 1px solid #F2F2F2;
 }
@@ -34,6 +34,7 @@ section {
   list-style-type: none;
   text-align: center;
   background-color: #F2F2F2;
+  padding-bottom: 30px;
 }
 
 .reserve {
@@ -203,29 +204,70 @@ aside {
 
 h3 {
   padding-left: 5%;
+  font-weight: bold;
 }
 
 /* partie main section avec cards*/
 .menu_card {
+  min-width: 360px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-decoration: none;
+  list-style-type: none;
+  text-align: center;
+  margin: 0 auto;
+  width: 80%;
+  max-width: 390px;
   background-color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 20px;
+  margin-bottom: 30px;
 }
 
 #img_home {
-  width: 95%;
-  height: 50%;
+  width: 100%;
+  max-height: 160px;
   -o-object-fit: cover;
      object-fit: cover;
-  border: 1px solid #9356DC;
   border-top-right-radius: 20px;
   border-top-left-radius: 20px;
 }
 
 .icon-legend {
-  height: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #000;
+}
+
+.card_legend {
+  width: 75%;
+}
+
+.card_legend h3, .card_legend p {
+  text-align: left;
+  padding-left: 5%;
+}
+
+.heart-icon {
+  text-align: right;
+  width: 50%;
+  color: #000;
+  font-size: 2em;
+  padding-right: 15px;
 }
 
 /*version tablette*/
@@ -327,5 +369,11 @@ body {
   font-family: 'Roboto', sans-serif;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+a:link {
+  text-decoration: none;
 }
 /*# sourceMappingURL=style.css.map */
