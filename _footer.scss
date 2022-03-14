@@ -1,0 +1,59 @@
+
+/*tailles de police ou d'icône*/
+$ftsize: 1em;
+
+/*mes mixins*/
+@mixin frontiers {
+      min-width: 360px;
+      flex-direction: column;
+      text-decoration: none;
+      list-style-type: none;
+      text-align: center;
+}
+
+
+/*pieds de pages */
+
+footer {
+      margin: 0 auto;
+      background-color: #000;
+      color: #fff;
+      display: flex;
+      @include frontiers;
+      text-align: start;
+      padding: 25px;
+
+
+}
+
+h1 {
+      font-family: $font-fam_titles;
+      display: flex;
+      justify-content: flex-start;      
+}
+
+.resume {
+      text-align: start;
+}
+
+.partners {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+
+}
+
+.f_icon {
+      width: 5%;
+      font-size: $ftsize;
+      text-align: right;
+}
+.inform {
+      a {
+            color: #fff;
+      }
+      p {
+            padding-left: inherit;
+      }
+}

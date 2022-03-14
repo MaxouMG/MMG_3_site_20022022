@@ -3,27 +3,117 @@
 /*tailles de police ou d'icône*/
 /* mixin*/
 /*extensions*/
-.button, #explore1 .explore2, .choose, .menu_card {
-  -webkit-box-shadow: 0px 5px 0px #DCDCDC;
-          box-shadow: 0px 5px 0px #DCDCDC;
+.button, section #explore1 .explore2, aside .choose, section .menu_card {
+  -webkit-box-shadow: 0px 5px 10px #DCDCDC;
+          box-shadow: 0px 5px 10px #DCDCDC;
   -webkit-transition: 500ms;
   transition: 500ms;
   border-radius: 25px;
   border: 1px solid #F2F2F2;
 }
 
-.button:hover, #explore1 .explore2:hover, .choose:hover, .menu_card:hover {
+.button:hover, section #explore1 .explore2:hover, aside .choose:hover, section .menu_card:hover {
   -webkit-transform: scale(1.01);
           transform: scale(1.01);
   -webkit-filter: opacity(70%);
           filter: opacity(70%);
-  -webkit-box-shadow: 20px 15px 2px 0px #DCDCDC;
-          box-shadow: 20px 15px 2px 0px #DCDCDC;
+  -webkit-box-shadow: 20px 15px 2px 10px #DCDCDC;
+          box-shadow: 20px 15px 2px 10px #DCDCDC;
+}
+
+/*loading spinner */
+@-webkit-keyframes wait {
+  0% {
+    -webkit-transform: rotate 0deg, scale 0.8;
+            transform: rotate 0deg, scale 0.8;
+  }
+  25% {
+    -webkit-transform: rotate 90deg, scale 1;
+            transform: rotate 90deg, scale 1;
+  }
+  50% {
+    -webkit-transform: rotate 180deg, scale 1.2;
+            transform: rotate 180deg, scale 1.2;
+  }
+  75% {
+    -webkit-transform: rotate 270deg, scale 1;
+            transform: rotate 270deg, scale 1;
+  }
+  100% {
+    -webkit-transform: rotate 360deg, scale 0.8;
+            transform: rotate 360deg, scale 0.8;
+  }
+}
+@keyframes wait {
+  0% {
+    -webkit-transform: rotate 0deg, scale 0.8;
+            transform: rotate 0deg, scale 0.8;
+  }
+  25% {
+    -webkit-transform: rotate 90deg, scale 1;
+            transform: rotate 90deg, scale 1;
+  }
+  50% {
+    -webkit-transform: rotate 180deg, scale 1.2;
+            transform: rotate 180deg, scale 1.2;
+  }
+  75% {
+    -webkit-transform: rotate 270deg, scale 1;
+            transform: rotate 270deg, scale 1;
+  }
+  100% {
+    -webkit-transform: rotate 360deg, scale 0.8;
+            transform: rotate 360deg, scale 0.8;
+  }
 }
 
 /*Ma page d'accueil  hors en tête*/
 /* mobile first*/
 /*première section - réserver le menu*/
+/* 
+body {
+      z-index: 0;
+      .loading {
+            margin: 0 auto;
+            width: 150px;
+            height: 150px;
+            position: fixed;
+            top: 50%;
+            left: 30%;            
+            border: 15px solid $tertiary;
+            border-top-color: $primary;
+            border-bottom-color: $primary;
+            border-left-color: $secondary;
+            border-right-color: $secondary;
+            border-radius: 50%;
+            animation: wait 3000ms infinite alternate;
+            z-index: 1;
+      }
+      .loading::before {
+            background-color: $tertiary;
+            opacity: 0.8;
+            width: 100%;
+            height: 100%;
+      }
+      @keyframes wait {
+            0% {
+                  transform: rotate (0deg), scale (0.8);
+            }
+            25% {
+                  transform: rotate (90deg), scale (1);
+            }
+            50% {
+                  transform: rotate (180deg), scale (1.2);
+            }
+            75% {
+                  transform: rotate (270deg), scale (1);
+            }
+            100% {
+                  transform: rotate (360deg), scale (0.8);
+            }
+      }
+      
+}*/
 section {
   min-width: 360px;
   -webkit-box-orient: vertical;
@@ -37,7 +127,7 @@ section {
   padding-bottom: 30px;
 }
 
-.reserve {
+section .reserve {
   min-width: 360px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -51,8 +141,13 @@ section {
   display: -ms-flexbox;
   display: flex;
   flex-direction: column;
-  /*margin-right: 5px;
-      margin-left: 5px;*/
+}
+
+section .reserve #aroundme {
+  width: 100%;
+  background-color: #DCDCDC;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 h2 {
@@ -60,30 +155,7 @@ h2 {
   padding-left: 15px;
 }
 
-#aroundme {
-  width: 100%;
-  background-color: #DCDCDC;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-::-webkit-input-placeholder {
-  color: #000;
-}
-
-:-ms-input-placeholder {
-  color: #000;
-}
-
-::-ms-input-placeholder {
-  color: #000;
-}
-
-::placeholder {
-  color: #000;
-}
-
-#city {
+section #city {
   text-align: center;
   margin-right: 0;
   margin-left: 0;
@@ -91,7 +163,7 @@ h2 {
   background-color: #DCDCDC;
 }
 
-#explore1 {
+section #explore1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -107,7 +179,7 @@ h2 {
           flex-direction: column;
 }
 
-#explore1 .explore2 {
+section #explore1 .explore2 {
   width: 250px;
   height: 35px;
   background: linear-gradient(355deg, #9356DC 30%, #FF79DA 70%);
@@ -117,7 +189,7 @@ h2 {
   margin-bottom: 25px;
 }
 
-#explore1 p {
+section #explore1 p {
   padding-right: 15px;
   padding-left: 15px;
 }
@@ -134,7 +206,7 @@ aside {
   text-align: center;
 }
 
-.borders {
+aside .borders {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -147,19 +219,19 @@ aside {
 }
 
 @media screen and (min-width: 500px) {
-  .borders {
+  aside .borders {
     width: 35%;
     text-align: end;
   }
 }
 
-.container_choice {
+aside .container_choice {
   margin: 0 auto;
   width: 80%;
   max-width: 500px;
 }
 
-.choose {
+aside .choose {
   height: 85px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -172,16 +244,16 @@ aside {
   position: relative;
 }
 
-.choose:hover {
+aside .choose:hover {
   background-color: #e4d5f6;
 }
 
-.number {
+aside .number {
   position: absolute;
   right: 95%;
 }
 
-.number p {
+aside .number p {
   width: 30px;
   height: 30px;
   line-height: 30px;
@@ -192,13 +264,13 @@ aside {
   border-radius: 50%;
 }
 
-.picture {
+aside .picture {
   width: 15%;
   font-size: 1em;
   text-align: right;
 }
 
-.picture:hover {
+aside .picture:hover {
   color: #9356DC;
 }
 
@@ -208,7 +280,8 @@ h3 {
 }
 
 /* partie main section avec cards*/
-.menu_card {
+/*section */
+section .menu_card {
   min-width: 360px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -228,7 +301,7 @@ h3 {
   position: relative;
 }
 
-#img_home1, #img_home2, #img_home3, #img_home4 {
+section #img_home1, section #img_home2, section #img_home3, section #img_home4 {
   width: 100%;
   max-height: 160px;
   -o-object-fit: cover;
@@ -237,7 +310,7 @@ h3 {
   border-top-left-radius: 20px;
 }
 
-.icon-legend {
+section .icon-legend {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -254,47 +327,47 @@ h3 {
   color: #000;
 }
 
-.card_legend {
+section .card_legend {
   width: 75%;
 }
 
-.card_legend h3, .card_legend p {
+section .card_legend h3, section .card_legend p {
   text-align: left;
   padding-left: 5%;
 }
 
-.card_legend h3 {
+section .card_legend h3 {
   margin-bottom: 0;
 }
 
-.card_legend p {
+section .card_legend p {
   margin-top: 0;
 }
 
-.heart-icon {
+section .heart-icon {
   text-align: right;
   width: 50%;
   color: #000;
   font-size: 2em;
   padding-right: 15px;
-  /* et a la fin je remplis ce coeur*/
-  /*
-      &:hover {
-            color: $secondary;
-            transition: linear 400ms;
-            color: $primary;
-      }*/
 }
 
+/* et a la fin je remplis ce coeur*/
+/* &:hover {
+      
+
+      }*/
 /* encadré nouveau*/
-.new {
+section .menu_card .new {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  border: 1px solid green;
+  border: 1px solid #32b091;
   border-radius: 5px;
-  color: green;
-  background-color: greenyellow;
+  color: #32b091;
+  background-color: #99E2D0;
+  -webkit-box-shadow: 2px 2px 5px #909090;
+          box-shadow: 2px 2px 5px #909090;
   font-weight: bold;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -321,23 +394,24 @@ h3 {
     background-color: #F2F2F2;
     padding-bottom: 5px;
   }
-  .reserve {
+  section .reserve {
     width: 550px;
     background-color: #fff;
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
   }
-  #aroundme, #explore1 {
+  section #aroundme, section #explore1 {
     border-top-right-radius: 20px;
     border-top-left-radius: 20px;
   }
   /*Partie main, sous-partie aside et ensemble container_choice*/
-  .borders {
+  aside .borders {
     width: 100%;
     text-align: center;
   }
-  .container_choice {
-    max-width: 895px;
+  aside .container_choice {
+    width: inherit;
+    max-width: none;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -351,10 +425,10 @@ h3 {
         -ms-flex-pack: center;
             justify-content: center;
   }
-  a {
+  aside a {
     margin-right: 10%;
   }
-  .choose {
+  aside .choose {
     width: 40%;
     padding-right: 0px;
     padding-left: 0px;
@@ -382,10 +456,9 @@ h3 {
 
 /* ma version desktop*/
 @media screen and (min-width: 992px) {
-  .container_choice {
-    width: inherit;
-    -ms-flex-line-pack: center;
-        align-content: center;
+  aside .container_choice {
+    max-width: 1000px;
+    /*align-content: center;*/
   }
   .choose {
     margin-bottom: 30px;
@@ -398,7 +471,7 @@ header {
   margin: 0 auto;
 }
 
-h1 {
+.logo {
   font-family: "Shrikhand", cursive;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -411,8 +484,75 @@ h1 {
       align-content: center;
 }
 
+/*tailles de police ou d'icône*/
+/*mes mixins*/
+/*pieds de pages */
+footer {
+  margin: 0 auto;
+  background-color: #000;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-width: 360px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-decoration: none;
+  list-style-type: none;
+  text-align: center;
+  text-align: start;
+  padding: 25px;
+}
+
+h1 {
+  font-family: "Shrikhand", cursive;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.resume {
+  text-align: start;
+}
+
+.partners {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.f_icon {
+  width: 5%;
+  font-size: 1em;
+  text-align: right;
+}
+
+.inform a {
+  color: #fff;
+}
+
+.inform p {
+  padding-left: inherit;
+}
+
 /*Ceci est ma page principale de style*/
 body {
+  max-width: 1300px;
   margin: 0 auto;
   font-family: 'Roboto', sans-serif;
   -webkit-box-sizing: border-box;
