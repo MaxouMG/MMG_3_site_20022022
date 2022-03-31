@@ -113,8 +113,8 @@
 }
 
 .starters {
-  -webkit-animation: slide-bottom 2s linear 1s both;
-          animation: slide-bottom 2s linear 1s both;
+  -webkit-animation: slide-bottom 200ms linear 1s both;
+          animation: slide-bottom 200ms linear 1s both;
   opacity: 1;
 }
 
@@ -155,16 +155,15 @@
 }
 
 .dishes {
-  -webkit-animation: slide-bottom 2s linear 3s both;
-          animation: slide-bottom 2s linear 3s both;
+  -webkit-animation: slide-bottom 600ms linear 1s both;
+          animation: slide-bottom 600ms linear 1s both;
   opacity: 1;
 }
 
 .desserts {
-  -webkit-animation: slide-bottom 2s linear 5s both;
-          animation: slide-bottom 2s linear 5s both;
+  -webkit-animation: slide-bottom 1000ms linear 1s both;
+          animation: slide-bottom 1000ms linear 1s both;
   opacity: 1;
-  margin-bottom: 100px;
 }
 
 .card:hover .card_legend {
@@ -179,6 +178,8 @@
 .card:hover .okay {
   -webkit-transform: translate(-54px);
           transform: translate(-54px);
+  -webkit-transition-duration: 500ms;
+          transition-duration: 500ms;
 }
 
 .card:hover .okay .fas.fa-check-circle {
@@ -218,9 +219,9 @@
 
 /*dans home.scss*/
 .homepage .hearts .far.fa-heart, .homepage .hearts .fas.fa-heart {
-  font-size: 3em;
+  font-size: 2em;
   position: absolute;
-  top: 180px;
+  top: 190px;
   right: 30px;
 }
 
@@ -310,7 +311,6 @@ footer {
           flex-direction: column;
   text-decoration: none;
   list-style-type: none;
-  text-align: center;
 }
 
 .container_footer {
@@ -323,7 +323,6 @@ footer {
           flex-direction: column;
   text-decoration: none;
   list-style-type: none;
-  text-align: center;
   padding-left: 8%;
   padding-right: 10%;
   padding-top: 40px;
@@ -410,31 +409,23 @@ footer {
         -ms-flex-align: center;
             align-items: center;
     text-align: center;
-    border: 2px dashed #DCDCDC;
   }
   footer h1, .resume {
     width: 350px;
-    border-left: 2px dashed #DCDCDC;
-    border-right: 2px dashed #DCDCDC;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
     padding-left: 15px;
     padding-right: 15px;
-    background-color: #DCDCDC;
-    color: #343a40;
   }
   footer h1 {
     border-top: 2px dashed #DCDCDC;
     margin-bottom: 0;
-    padding-top: 15px;
+    padding-top: 25px;
   }
   .resume {
     border-bottom: 2px dashed #DCDCDC;
-    padding-bottom: 15px;
-  }
-  .inform a {
-    color: #343a40;
+    padding-bottom: 25px;
   }
 }
 
@@ -456,7 +447,6 @@ section, aside {
           flex-direction: column;
   text-decoration: none;
   list-style-type: none;
-  text-align: center;
 }
 
 /* première section avec reserve #aroundme et explore */
@@ -482,6 +472,8 @@ section {
 #aroundme {
   width: 100%;
   background-color: #DCDCDC;
+  -webkit-box-shadow: 0px 6px 7px -2px rgba(83, 92, 101, 0.5) inset;
+          box-shadow: 0px 6px 7px -2px rgba(83, 92, 101, 0.5) inset;
   padding-top: 10px;
   padding-bottom: 10px;
 }
@@ -565,7 +557,6 @@ aside {
           flex-direction: column;
   text-decoration: none;
   list-style-type: none;
-  text-align: center;
 }
 
 .choose {
@@ -580,11 +571,14 @@ aside {
   background: #F2F2F2;
   margin-bottom: 30px;
   position: relative;
-  left: 10px;
 }
 
 .choose:hover {
   background-color: #e4d5f6;
+}
+
+.choose:hover .picture {
+  color: #9356DC;
 }
 
 @media screen and (min-width: 415px) {
@@ -615,28 +609,12 @@ aside {
   text-align: right;
 }
 
-.picture:hover {
-  color: #9356DC;
-}
-
 .choose h3 {
   padding-left: 5%;
 }
 
-/* partie main section avec cards et animation heart-icon
-                  heart dans _heart.scss*/
-main section {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
+/* partie main section avec cards 
+      et animation heart-icon heart dans _heart.scss*/
 .menu_card {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -647,7 +625,6 @@ main section {
           flex-direction: column;
   text-decoration: none;
   list-style-type: none;
-  text-align: center;
   margin: 0 auto;
   width: 80%;
   max-width: 390px;
@@ -727,7 +704,7 @@ main section {
         -ms-flex-align: center;
             align-items: center;
     text-align: center;
-    background-color: #F2F2F2;
+    background-color: inherit;
     padding-bottom: 5px;
   }
   .reserve {
@@ -737,16 +714,13 @@ main section {
     border-bottom-left-radius: 20px;
   }
   #aroundme, #explore1 {
-    border-top-right-radius: 20px;
-    border-top-left-radius: 20px;
+    border-radius: 30px;
   }
-  /*Partie main, sous-partie aside le H2 en .borders et l'ensemble container_choice*/
+  /*Partie main, sous-partie aside le H2 en .borders
+      et l'ensemble container_choice*/
   aside .borders, section .borders {
     width: 100%;
     text-align: center;
-  }
-  aside {
-    background: linear-gradient(45deg, #F2F2F2 30%, #9356DC, #FF79DA);
   }
   .container_choice {
     width: inherit;
@@ -792,10 +766,6 @@ main section {
 
 /* version desktop*/
 @media screen and (min-width: 992px) {
-  aside {
-    border-left: 2px dashed #DCDCDC;
-    border-right: 2px dashed #DCDCDC;
-  }
   .container_choice {
     max-width: 1000px;
   }
@@ -883,26 +853,24 @@ main section {
 
 article {
   width: 100%;
-}
-
-.starters, .dishes, .desserts {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
+/*
+.starters, .dishes, .desserts {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      
+}
+*/
 .over {
-  width: 100%;
   padding-left: 25px;
 }
 
@@ -923,7 +891,7 @@ h4 {
 .card {
   border-radius: 30px;
   height: 80px;
-  width: 95%;
+  width: 340px;
   max-width: 500px;
   background-color: #fff;
   overflow: hidden;
@@ -991,6 +959,10 @@ h4 {
   background-color: #99E2D0;
 }
 
+.desserts {
+  margin-bottom: 100px;
+}
+
 /* bouton commander partie main et dernière div*/
 main #explore1 .explore2 {
   width: 200px;
@@ -1015,10 +987,7 @@ main #explore1 .explore2 {
   .lpdgpage main, .lnepage main, .alfpage main, .lddspage main {
     width: 100%;
     max-width: none;
-    background: linear-gradient(45deg, #F2F2F2 30%, #9356DC, #FF79DA);
-  }
-  .over {
-    padding-left: 450px;
+    background: inherit;
   }
   .legend {
     border-radius: 30px;
@@ -1033,8 +1002,16 @@ main #explore1 .explore2 {
   }
 }
 
+/*version desktop*/
+@media screen and (min-width: 992px) {
+  .card {
+    width: 550px;
+  }
+}
+
 /*mise en page générale*/
 body {
+  width: 100%;
   min-width: 350px;
   max-width: 1300px;
   margin: 0 auto;
