@@ -189,31 +189,31 @@
 
 @-webkit-keyframes rotate {
   0% {
-    -webkit-transform: rotateZ(0deg);
-            transform: rotateZ(0deg);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
   50% {
-    -webkit-transform: rotateZ(-180deg);
-            transform: rotateZ(-180deg);
+    -webkit-transform: rotate(-180deg);
+            transform: rotate(-180deg);
   }
   100% {
-    -webkit-transform: rotateZ(-360deg);
-            transform: rotateZ(-360deg);
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
   }
 }
 
 @keyframes rotate {
   0% {
-    -webkit-transform: rotateZ(0deg);
-            transform: rotateZ(0deg);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
   50% {
-    -webkit-transform: rotateZ(-180deg);
-            transform: rotateZ(-180deg);
+    -webkit-transform: rotate(-180deg);
+            transform: rotate(-180deg);
   }
   100% {
-    -webkit-transform: rotateZ(-360deg);
-            transform: rotateZ(-360deg);
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
   }
 }
 
@@ -861,15 +861,6 @@ article {
           justify-content: center;
 }
 
-/*
-.starters, .dishes, .desserts {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      
-}
-*/
 .over {
   padding-left: 25px;
 }
