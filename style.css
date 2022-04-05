@@ -539,12 +539,6 @@ aside {
   padding: 10px 25px;
 }
 
-@media screen and (min-width: 500px) {
-  .borders {
-    width: 35%;
-  }
-}
-
 .container_choice {
   margin: 0 auto;
   max-width: 500px;
@@ -719,8 +713,11 @@ aside {
   /*Partie main, sous-partie aside le H2 en .borders
       et l'ensemble container_choice*/
   aside .borders, section .borders {
-    width: 100%;
     text-align: center;
+    padding: 10px 0;
+  }
+  section .borders {
+    width: 100%;
   }
   .container_choice {
     width: inherit;
