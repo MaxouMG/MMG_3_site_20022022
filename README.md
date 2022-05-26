@@ -1,2 +1,2 @@
 # MaxouMG.github.io
-The web page project 3
+Web page project 3
